@@ -22,3 +22,6 @@ Using the development version (using django debug tool, & Werkzeug):
 
 `python manage.py runserver`
 
+See the sample view at:
+
+<http://127.0.0.1:8000/squiggle_views/>
