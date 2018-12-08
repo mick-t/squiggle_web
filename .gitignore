@@ -102,3 +102,43 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Ignore unit test stuff:
+*test_files*
+
+# Ignore sensitive stuff:
+*sqlite_dbs*
+
+# ignore Eclipse files:
+.project
+.pydevproject
+
+# ignore MacOS crud:
+.DS_Store
+
+# other stuff
+.settings
+
+# Emacs files:
+# ignore emacs autosaves and other cruft:
+.~*
+*~*
+\#*\#
+.\#*
+
+#vim tmp files
+*.swp
+
+# ignore atom files
+.on-save.json
+.tags
+
+# ignore directory based project format (.idea/)
+.idea/*
+
+# ignore database dumps
+*.sql*
+
+# ignore geckodriver related files
+geckodriver*
+wires
