@@ -5,7 +5,7 @@ Still under development.
 
 Steps to run:
 
-* Create a virtualenv.
+* Create a Python 3.6+ virtualenv.
 * Source the virtualenv.
 * Install the required dependencies:
 
