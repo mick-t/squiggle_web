@@ -14,6 +14,6 @@ pytz==2018.7
 PyYAML==3.13
 six==1.11.0
 # mick's test branch of squiggle
--e git+git@github.com:mick-t/squiggle.git@c6cee24da1596ed3b48dd9f697c145e6e2d065c0#egg=squiggle
+-e git+https://github.com/mick-t/squiggle.git@squiggle_web#egg=squiggle
 tornado==5.1.1
 tqdm==4.28.1
