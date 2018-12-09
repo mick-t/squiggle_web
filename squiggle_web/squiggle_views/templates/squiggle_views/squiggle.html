@@ -17,9 +17,17 @@
 {% endblock extra_js %}
 
 {% block body %}
-    {# asssume that variables are being passed to this: #}
-	{{ div | safe }}
 
+{% block contents %}
+      <div class="container">
+        <div class="row">
+            <div class="col-md-410">
+                {# asssume that variables are being passed to this: #}
+	            {{ div | safe }}
+	        </div>	        
+	   </div>
+    </div>
+{% endblock contents %}
 {% endblock body %}
 {% block js_foot %} 
  {{ script | safe }}
