@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block meta %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""/>
+    <meta name="keywords" content="Harvard University, DNA, DNA Visulizations">
+    {% endblock meta %}
+
+    <title>{% block title %}Squiggle: DNA Visualizations{% endblock %}</title>
+
+{% block base_head %}
+    {% block css_head %}
+        {# use this to override all the default css #}
+    {% endblock css_head %}
+    {% block extra_css %} 
+        {# add extra css here #}
+    {% endblock extra_css %}
+
+    {% block extra_js %} 
+        {# add extra js here #}
+    {% endblock extra_js %}
+{% endblock base_head %}    
+</head>
+<body>
+{% block body %}
+<!--  html body goes here -->
+{% endblock body %}
+</body>
+
+{% block js_foot %} 
+    {# add javascript that needs to load after the rest of the page has loaded here #}
+{% endblock js_foot %}
+</html>
