@@ -22,7 +22,7 @@ Using the development version (using django debug tool, & Werkzeug):
 `pip install -r requirements-debug.txt`
 * Run the app:
 
-`python manage.py runserver  --settings=squiggle_web.dev
+`python manage.py runserver  --settings=squiggle_web.dev`
 
 See the sample view at:
 
