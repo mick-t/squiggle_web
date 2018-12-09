@@ -17,9 +17,14 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
 
+# default home page view
+from .views import home
+
 urlpatterns = [
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('squiggle_views/', include('squiggle_views.urls')),
+     # home page
 ]
 
 if settings.DEBUG:
