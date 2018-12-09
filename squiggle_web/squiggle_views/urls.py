@@ -18,6 +18,9 @@ from django.urls import path
 
 from . import views
 
+# TODO:  is this really how to set a namespaced URLs?
+app_name = 'squiggle_views'
+
 
 urlpatterns = [
     path('', views.index, name='index'),
