@@ -1,4 +1,5 @@
 # used for debug/testing environments
+django-debug-toolbar==1.11
 django-debug-toolbar-extra==0.0.2
 django-extensions==2.1.4
 django-werkzeug-debugger-runserver==0.3.1
