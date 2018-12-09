@@ -14,13 +14,15 @@ Steps to run:
 
 `python manage.py runserver`
 
+**Note**: use the dev setting file, production isn't ready yet.
+
 Using the development version (using django debug tool, & Werkzeug):
 * Install the additional required dependencies:
 
 `pip install -r requirements-debug.txt`
 * Run the app:
 
-`python manage.py runserver`
+`python manage.py runserver  --settings=squiggle_web.dev
 
 See the sample view at:
 
