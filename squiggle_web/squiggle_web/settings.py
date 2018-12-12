@@ -133,6 +133,12 @@ STATIC_URL = '/static/'
 # where static files are copied to from all the other apps (css, js).
 # in real life this woudl point to a directory that our web server has access to
 STATIC_ROOT = str(os.path.abspath(os.path.join(BASE_DIR, '../static/')))
-STATICFILES_DIRS = [ # directory that static files are collected from
+STATICFILES_DIRS = [  # directory that static files are collected from
     str(os.path.abspath(os.path.join(STATIC_ROOT, '/static'))),
 ]
+
+# where files are uploaded to:
+# TODO: in production, this should a directory that's not in the source tree.
+MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'media'))
+# URL that handles the media served from MEDIA_ROOT
+MEDIA_URL = '/media/'
