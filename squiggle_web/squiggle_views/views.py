@@ -1,7 +1,7 @@
 import os
 
 from django.conf import settings
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render_to_response
 from squiggle.cli import visualize_inner
 
 # a fasta file to use:
@@ -19,14 +19,12 @@ fasta_file = str(
 def index(request):
     # the 'file' needs to be of type click.Path which is a tuple
     file_tuple = (fasta_file,)
-    print("type(file_tuple): %s:%s" % (type(file_tuple),file_tuple))
 
     script, div = visualize_inner(file_tuple, web=True)
     pass
-    
+
     return render_to_response(
         'squiggle_views/squiggle.html',
-        {'script' : script , 'div' : div}
-    ) 
-
+        {'script': script, 'div': div}
+    )
 
