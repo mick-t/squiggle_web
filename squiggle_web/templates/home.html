@@ -1,25 +1,31 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
 {% block body %}
-     
-     {% block contents %}
-      <!--  Form -->
-      <div class="container">
-        <div class="row">
-            <div class="col-md-410">
-                <h2>Analyze your data</h2>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                    </div>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-      {% endblock contents %}   
+
+{% block contents %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-410">
+      <h2>Analyze your data</h2>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="input-group">
+          <input type="file" class="form-control" name="myfile">
+          <button type="submit" class="btn btn-primary">Upload</button>
+         </div>
+         <small id="emailHelp" class="form-text text-muted">We'll never share your data with anyone else.</small>                
+      </form>                                    
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-410">
+      {% if uploaded_file_url %}
+        <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+      {% endif %}
+    </div>
+  </div>        
+ </div>     
+{% endblock contents %} 
 
 {% endblock body %}
-       
