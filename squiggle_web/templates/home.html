@@ -10,7 +10,7 @@
       <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="input-group">
-          <input type="file" class="form-control" name="myfile">
+          <input type="file" class="form-control" name="myfile" multiple>
           <button type="submit" class="btn btn-primary">Upload</button>
          </div>
          <small id="emailHelp" class="form-text text-muted">We'll never share your data with anyone else.</small>                
